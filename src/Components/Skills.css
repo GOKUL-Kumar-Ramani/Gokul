@@ -1,0 +1,76 @@
+/* Basic styles for the Skills section */
+.skills {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Container to hold skill images */
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Gives the 3D effect */
+  height: 300px; /* Adjust the height to fit the 3D space */
+}
+
+.skill-wrapper {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+}
+
+.skill-item {
+  position: absolute;
+  width: 200px; /* Size of the skill icon */
+  height: 200px; /* Size of the skill icon */
+  border-radius: 50%; /* Circular images */
+  background-color: #f1f1f1; /* Background color for the images */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: 50% 50%;
+}
+
+.skill-item img {
+  width: 60px; /* Adjust image size */
+  height: 60px; /* Adjust image size */
+  border-radius: 50%;
+}
+
+/* 3D Rotation animation */
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+/* Positioning of the skill items in an oval shape */
+.skill-item:nth-child(1) {
+  transform: rotateY(0deg) translateZ(150px);
+}
+
+.skill-item:nth-child(2) {
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+.skill-item:nth-child(3) {
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+.skill-item:nth-child(4) {
+  transform: rotateY(270deg) translateZ(150px);
+}
+
+/* You can adjust the rotate values (rotateY) for additional items */
