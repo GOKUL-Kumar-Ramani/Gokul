@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Gokul/static/css/main.94097ceb.css",
+    "main.js": "/Gokul/static/js/main.9dbc36e0.js",
+    "static/js/488.15c117bb.chunk.js": "/Gokul/static/js/488.15c117bb.chunk.js",
+    "index.html": "/Gokul/index.html",
+    "main.94097ceb.css.map": "/Gokul/static/css/main.94097ceb.css.map",
+    "main.9dbc36e0.js.map": "/Gokul/static/js/main.9dbc36e0.js.map",
+    "488.15c117bb.chunk.js.map": "/Gokul/static/js/488.15c117bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94097ceb.css",
+    "static/js/main.9dbc36e0.js"
+  ]
+}
