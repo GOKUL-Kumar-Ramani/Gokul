@@ -1,0 +1,123 @@
+/* Hero Section */
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  background: #0f0f0f; /* Solid dark background for focus */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  transition: all 0.3s ease-out; /* Smooth transition for background changes */
+}
+
+/* Container for both Text and Image */
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Maximum width to prevent text from getting too wide */
+  margin: 0 auto;
+}
+
+/* Hero Text Styling */
+.hero-text {
+  flex: 1;
+  padding-right: 40px;
+  color: #eaeaea;
+  text-align: left;
+  font-family: 'Roboto', sans-serif; /* Elegant sans-serif font */
+}
+
+.hero-text h1 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.2s; /* Smooth fade-in animation */
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 1s forwards 0.4s; /* Fade-in with delay for smooth sequence */
+}
+
+.hero-text .highlight {
+  color: #FF5733; /* Bright color for emphasis */
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.hero-text .highlight:hover {
+  transform: scale(1.1); /* Slight hover zoom */
+}
+
+/* Hero Image Styling */
+.hero-image {
+  flex: 1;
+  position: relative;
+  max-width: 550px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* Smooth rounded corners */
+  object-fit: cover;
+  transition: transform 0.4s ease; /* Smooth zoom effect on hover */
+}
+
+.hero-image img:hover {
+  transform: scale(1.05); /* Zoom effect */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto; /* Allow flexible height on small screens */
+    padding: 30px 10px;
+    margin-top: 70px; /* Ensure space for the navbar */
+  }
+
+  .hero-content {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center content in column layout */
+  }
+
+  .hero-text {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 30px;
+    font-size: 1.2rem; /* Adjust font size for readability on small screens */
+  }
+
+  .hero-image {
+    width: 80%; /* Adjust image size for mobile */
+    margin-top: 20px;
+  }
+
+  /* Adjust h1 for mobile */
+  .hero-text h1 {
+    font-size: 2.5rem; /* Reduce font size on mobile */
+    margin-bottom: 15px; /* More spacing below heading */
+  }
+}
