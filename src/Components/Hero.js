@@ -14,9 +14,9 @@ const Hero = () => {
             Experience on Web, Android, iOS, and Linux platforms, with a passion for enhancing user experiences.
           </p>
         </div>
-        <div className="hero-image">
+        {/* <div className="hero-image">
           <img src="your-image-url.jpg" alt="Your Image" />
-        </div>
+        </div> */}
       </div>
     </section>
   );
