@@ -11,12 +11,12 @@ const Hero = () => {
             I am a Software Developer with 6+ years of experience,
           </p>
           <p>
-            Experience on Web, Android, iOS, and Linux platforms, with a passion for enhancing user experiences.
+          Extensive experience in developing applications on Web, Android, iOS, and Linux platforms, with a passion for enhancing user experiences.
           </p>
         </div>
-        {/* <div className="hero-image">
+        <div className="hero-image">
           <img src="your-image-url.jpg" alt="Your Image" />
-        </div> */}
+        </div>
       </div>
     </section>
   );

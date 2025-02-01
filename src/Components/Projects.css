@@ -1,0 +1,215 @@
+.projects-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-color: #000;
+  touch-action: pan-y pinch-zoom;
+}
+
+.project-background {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.7s ease-in-out;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+}
+
+.navigation-controls {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+}
+
+.nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.nav-button.prev {
+  left: 20px;
+}
+
+.nav-button.next {
+  right: 20px;
+}
+
+.content-container {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content-box {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+}
+
+.project-counter {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  color: white;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: -0.5px;
+}
+
+.project-description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+.project-indicators {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+  justify-content: center;
+}
+
+.indicator {
+  height: 4px;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 16px;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  min-width: 16px; /* Added for mobile */
+}
+
+.indicator.active {
+  width: 32px;
+  background-color: white;
+}
+
+.swipe-indicator {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  z-index: 30;
+  text-align: center;
+  animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .content-box {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .project-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .nav-button {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .swipe-indicator {
+    display: block;
+  }
+
+  .project-counter {
+    top: -25px;
+    font-size: 12px;
+  }
+
+  .indicator {
+    height: 3px;
+    width: 12px;
+  }
+
+  .indicator.active {
+    width: 24px;
+  }
+
+  /* Hide navigation buttons on very small screens */
+  @media (max-width: 480px) {
+    .nav-button {
+      display: none;
+    }
+    
+    .content-box {
+      padding: 16px;
+    }
+  }
+}
+
+/* Prevent text selection during swipe */
+.projects-wrapper {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Add touch feedback */
+.content-box:active {
+  transform: scale(0.99);
+}

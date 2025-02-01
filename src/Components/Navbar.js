@@ -9,6 +9,19 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen); // Toggle menu state
   };
 
+  const handleDownload = () => {
+    // Replace 'your-resume.pdf' with your actual resume file name
+    const resumeUrl = '/resume.pdf';
+    
+    // Create a temporary link element
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.download = 'YourName_Resume.pdf'; // Replace with your name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
       <ul>
@@ -33,7 +46,7 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="download">
-          <Link to="Download" smooth={true} duration={500}>
+          <Link onClick={handleDownload} smooth={true} duration={500}>
             <img src="path-to-your-image.png" className="download-icon" alt="Download Icon" />
             Download
           </Link>

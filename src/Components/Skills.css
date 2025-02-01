@@ -1,13 +1,21 @@
 /* Basic styles for the Skills section */
 .skills {
-  padding: 60px 20px;
+  height: 100vh; /* Full screen */
+  padding: 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+/* Heading */
 .skills h2 {
   font-size: 2rem;
-  margin-bottom: 40px;
   color: #333;
+  position: absolute;
+  top: 20px; /* Position the heading at the top */
+  z-index: 10;
 }
 
 /* Container to hold skill images */
@@ -15,24 +23,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 1000px; /* Gives the 3D effect */
-  height: 300px; /* Adjust the height to fit the 3D space */
+  perspective: 1500px; /* 3D perspective */
+  height: 100%; /* Take full height */
+  width: 100%; /* Take full width */
+  position: relative;
 }
 
 .skill-wrapper {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
   position: relative;
   transform-style: preserve-3d;
-  animation: rotate 10s infinite linear;
+  animation: rotate 15s infinite linear; /* Slower rotation */
 }
 
 .skill-item {
   position: absolute;
-  width: 200px; /* Size of the skill icon */
-  height: 200px; /* Size of the skill icon */
-  border-radius: 50%; /* Circular images */
-  background-color: #f1f1f1; /* Background color for the images */
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
@@ -41,8 +51,8 @@
 }
 
 .skill-item img {
-  width: 60px; /* Adjust image size */
-  height: 60px; /* Adjust image size */
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -56,21 +66,33 @@
   }
 }
 
-/* Positioning of the skill items in an oval shape */
+/* Positioning skill items in an oval shape */
 .skill-item:nth-child(1) {
-  transform: rotateY(0deg) translateZ(150px);
+  transform: rotateY(0deg) translateZ(200px) rotate(0deg);
 }
 
 .skill-item:nth-child(2) {
-  transform: rotateY(90deg) translateZ(150px);
+  transform: rotateY(90deg) translateZ(200px) rotate(90deg);
 }
 
 .skill-item:nth-child(3) {
-  transform: rotateY(180deg) translateZ(150px);
+  transform: rotateY(180deg) translateZ(200px) rotate(180deg);
 }
 
 .skill-item:nth-child(4) {
-  transform: rotateY(270deg) translateZ(150px);
+  transform: rotateY(270deg) translateZ(200px) rotate(270deg);
 }
 
-/* You can adjust the rotate values (rotateY) for additional items */
+/* Rotate text SVG animation */
+.svg-path {
+  animation: rotatePath 15s infinite linear;
+}
+
+@keyframes rotatePath {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
