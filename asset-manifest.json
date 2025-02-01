@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Gokul/static/css/main.e36f83ca.css",
-    "main.js": "/Gokul/static/js/main.c3fe8e96.js",
+    "main.css": "/Gokul/static/css/main.0594bd50.css",
+    "main.js": "/Gokul/static/js/main.478f7582.js",
     "static/js/488.15c117bb.chunk.js": "/Gokul/static/js/488.15c117bb.chunk.js",
     "index.html": "/Gokul/index.html",
-    "main.e36f83ca.css.map": "/Gokul/static/css/main.e36f83ca.css.map",
-    "main.c3fe8e96.js.map": "/Gokul/static/js/main.c3fe8e96.js.map",
+    "main.0594bd50.css.map": "/Gokul/static/css/main.0594bd50.css.map",
+    "main.478f7582.js.map": "/Gokul/static/js/main.478f7582.js.map",
     "488.15c117bb.chunk.js.map": "/Gokul/static/js/488.15c117bb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e36f83ca.css",
-    "static/js/main.c3fe8e96.js"
+    "static/css/main.0594bd50.css",
+    "static/js/main.478f7582.js"
   ]
 }
